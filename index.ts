@@ -35,7 +35,7 @@ const run = async (url: string, interval: number) => {
       const fileName = `${Date.now()}.${typeInfo.ext}`;
       const filePath = join(__dirname, 'cats', fileName);
       writeFile(filePath, res.body);
-    });
+    }).catch(err => console.error(err));
   }, interval);
 };
 
