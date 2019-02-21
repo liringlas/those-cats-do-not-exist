@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strict": true,
+    "jsx": "react",
+    "lib": ["dom", "es6", "es7", "esnext"],
+    "skipLibCheck": true,
+    "noImplicitAny": false
+  },
+  "exclude": ["node_modules"],
+  "watch": true
+}
