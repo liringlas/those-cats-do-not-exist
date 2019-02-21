@@ -16,6 +16,8 @@ const isValid = (res: Response, typeInfo: fileType.FileTypeResult | null) => {
   return true;
 };
 
+// TODO: Add morgan file logging
+// TODO: Add cron job for archiving, cleaning, and (maybe) sending archived data
 const run = async (url: string, interval: number) => {
   let previousBuffer: Buffer;
   await ensureDir(join(__dirname, 'cats'));
@@ -30,7 +32,9 @@ const run = async (url: string, interval: number) => {
         return;
       }
       previousBuffer = res.body;
-      writeFile(join(__dirname, 'cats', `${Date.now()}.${typeInfo.ext}`), res.body);
+      const fileName = `${Date.now()}.${typeInfo.ext}`;
+      const filePath = join(__dirname, 'cats', fileName);
+      writeFile(filePath, res.body);
     });
   }, interval);
 };
