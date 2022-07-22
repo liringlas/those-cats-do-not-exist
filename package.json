@@ -20,7 +20,7 @@
   "homepage": "https://github.com/theaklair/those-cats-does-not-exist#readme",
   "dependencies": {
     "cron": "^1.6.0",
-    "file-type": "^10.8.0",
+    "file-type": "^16.5.4",
     "fs-extra": "^7.0.1",
     "superagent": "^4.1.0",
     "ts-node": "^8.0.2",
